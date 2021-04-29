@@ -3,13 +3,14 @@ import ReactStars from "react-rating-stars-component";
 
 
 
-
-const Rating = ({rating,setRating}) => {
+const Rating = ({rating,setRating,e}) => {
     
     return (
         <div>
             <ReactStars count={5}
-            value={setRating}
+            value={rating}
+            onChange={e=>setRating(e.target.value)}
+            
     size={24}
     isHalf={true}
     emptyIcon={<i className="far fa-star"></i>}

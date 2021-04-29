@@ -18,7 +18,8 @@ const Addmovie = ({joinMovie}) => {
           title: title,
           poster: poster,
           description: description,
-          rating: rating
+          rating: rating,
+          id: Math.random()
         }
      joinMovie(newMovie,e)
         setTitle('')

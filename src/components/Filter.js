@@ -2,7 +2,7 @@ import React from 'react'
 import {Navbar,Form,Nav,NavDropdown,FormControl,Button}from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
-import Rating from './Rating';
+import ReactStars from "react-rating-stars-component";
 
 const Filter = ({ratingSearch,setRatingSearch,titleSearch,setTitleSearch}) => {
     return (
@@ -24,8 +24,7 @@ const Filter = ({ratingSearch,setRatingSearch,titleSearch,setTitleSearch}) => {
     </Nav>
     <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" value={titleSearch} onChange={e=>setTitleSearch(e.target.value)}/>
-      <Button variant="outline-success">Search</Button>
-      <Rating rating={ratingSearch} setRating={setRatingSearch}/>
+      <ReactStars value={ratingSearch} onChange={setRatingSearch} />
     </Form>
   </Navbar.Collapse>
 </Navbar>

@@ -3,6 +3,9 @@ import { Card , Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 import ReactStars from "react-rating-stars-component";
+import {BrowserRouter as Router, Route, Switch,Link} from 'react-router-dom'
+import Description from './Description'
+import RouterApp from './RouterApp'
 
 const MovieCard = ({movie}) => {
     
@@ -14,13 +17,26 @@ const MovieCard = ({movie}) => {
     <Card.Img variant="top" src={movie.poster} style={{display: "block",marginLeft: "auto",marginRight: "auto"}} />
     <Card.Body>
       <Card.Title style={{textAlign:"center"}}>{movie.title}</Card.Title>
+
+      <Router>
+        <Switch>
+        
+        
+        <Link to={`/description/${movie.id}`}>Read the description</Link>
+       
+        
+        
+        </Switch>
+        </Router>
+    
+      
       <Card.Text style={{textAlign:"center"}}>
       {movie.description}
       </Card.Text>
       <Card.Text >
           <ReactStars  value={movie.rating}  size={24} isHalf={true} style={{display: "block",marginLeft: "auto",marginRight: "auto"}}/>
       </Card.Text>
-      <Button variant="primary" style={{display: "block",marginLeft: "auto",marginRight: "auto"}} >Add to watch list</Button>
+      <Button variant="secondary" style={{display: "block",marginLeft: "auto",marginRight: "auto"}} >watch trailer</Button>
     </Card.Body>
   </Card>
 
