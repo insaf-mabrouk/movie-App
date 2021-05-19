@@ -3,9 +3,9 @@ import { Card , Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 import ReactStars from "react-rating-stars-component";
-import {BrowserRouter as Router, Route, Switch,Link} from 'react-router-dom'
-import Description from './Description'
-import RouterApp from './RouterApp'
+import {Link} from 'react-router-dom'
+
+
 
 const MovieCard = ({movie}) => {
     
@@ -18,19 +18,9 @@ const MovieCard = ({movie}) => {
     <Card.Body>
       <Card.Title style={{textAlign:"center"}}>{movie.title}</Card.Title>
 
-      <Router>
-        <Switch>
-        
-        
-        <Link to={`/description/${movie.id}`}>Read the description</Link>
-       
-        
-        
-        </Switch>
-        </Router>
-    
-      
-      <Card.Text style={{textAlign:"center"}}>
+ <Link to={`/description/ ${movie.id}`}>Read the description of this movie</Link>
+
+    <Card.Text style={{textAlign:"center"}}>
       {movie.description}
       </Card.Text>
       <Card.Text >

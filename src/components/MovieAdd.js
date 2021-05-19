@@ -29,8 +29,8 @@ const Addmovie = ({joinMovie}) => {
     }
   return (
         <div>
-      <Button variant="secondary" onClick={handleShow} style={{justifyContent:"center"}}>
-        +
+      <Button className= "secondary" variant="secondary" onClick={handleShow} style={{justifyContent:"center"}}>
+        Add movie
       </Button>
      <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

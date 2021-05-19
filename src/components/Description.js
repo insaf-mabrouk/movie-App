@@ -1,13 +1,21 @@
 
-import React from 'react'
+import React,{useState} from 'react'
+import data from './Movies';
 
-const Description = () => {
+
+const Description =(movie) => {
+    const [description, setDescription] = useState(data)
+    const [movies, setMovies] = useState(data)
+    console.log(movies,'movies')
+    
+
+    
     return (
         <div>
             <h1>Description</h1>
-            <p>Description text</p>
+            <ul>{movies.map(el=><li>{el.description}</li>)}</ul>
+            
         </div>
     )
 }
-
 export default Description

@@ -6,7 +6,7 @@ import data from './components/Movies';
 
 const Home = () => {
 
-    const [movies, setMovies] = useState(data)
+  const [movies, setMovies] = useState(data)
   const [ratingSearch, setRatingSearch] =useState("")
   const [titleSearch, setTitleSearch] =useState("")
 
@@ -20,9 +20,10 @@ const Home = () => {
             <br/>
             <Filter ratingSearch={ratingSearch} setRatingSearch={setRatingSearch} titleSearch={titleSearch} setTitleSearch={setTitleSearch}/>
             <br/>
+            <MovieAdd joinMovie={joinMovie} />
             <br/>
             <MovieList  movies ={movies} titleSearch={titleSearch} ratingSearch={ratingSearch}/>
-            <MovieAdd joinMovie={joinMovie} />
+            
             
         </div>
     )

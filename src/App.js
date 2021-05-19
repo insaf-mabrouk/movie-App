@@ -9,15 +9,10 @@ import RouterApp from './components/RouterApp';
 
     return (
       <div className="App">
-
-        
         <div> 
           <RouterApp/>
         </div>
-        
-       
-        
-        </div>
+      </div>
     )}
   export default App;
 
